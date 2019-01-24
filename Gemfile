@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Application Specific Gems
 gem 'bootstrap'
 gem 'devise'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'pundit'
 gem 'rolify'
