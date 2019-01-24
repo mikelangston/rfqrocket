@@ -1,0 +1,15 @@
+<div class="row py-2">
+  <div class="col-md-6 offset-3">
+    <h2 class="text-center">New Role</h2>
+    <%= form_with model: [:super_admin, @role] do |f| %>
+    <div class="py-2">
+      <h5 class="mb-0 pb-0"><%= f.label :name, "Role Name" %></h5>
+      <%= f.text_field :name, placeholder: "Role Name", class: "form-control" %>
+    </div>
+    <div class="py-2 text-center">
+      <%= f.submit "Create Role", class: "btn btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-secondary" %>
+    </div>
+    <% end %>
+  </div>
+</div>
