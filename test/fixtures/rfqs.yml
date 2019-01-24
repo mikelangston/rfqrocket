@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  name: MyString
+  number: MyString
+  initiator: MyString
+  issue_date: 2019-01-23 23:33:51
+  due_date: 2019-01-23 23:33:51
+  status: MyString
+  sealed: false
+
+two:
+  project: two
+  name: MyString
+  number: MyString
+  initiator: MyString
+  issue_date: 2019-01-23 23:33:51
+  due_date: 2019-01-23 23:33:51
+  status: MyString
+  sealed: false

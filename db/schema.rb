@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_205923) do
+ActiveRecord::Schema.define(version: 2019_01_24_043351) do
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "number"
+    t.string "jobsite"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rfqs", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "name"
+    t.string "number"
+    t.string "initiator"
+    t.datetime "issue_date"
+    t.datetime "due_date"
+    t.string "status"
+    t.boolean "sealed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_rfqs_on_project_id"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"

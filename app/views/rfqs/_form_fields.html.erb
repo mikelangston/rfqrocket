@@ -1,0 +1,29 @@
+<%= f.hidden_field :project_id, {value: @project.id} %>
+<div class="py-2">
+  <h5 class="mb-0 pb-0"><%= f.label :status, "RFQ Status" %></h5>
+  <%= f.select :status, options_for_select(Rfq::STATUS, selected: @rfq.status), { include_blank: "Status"}, class: "form-control" %>
+</div>
+<div class="py-2">
+  <h5 class="mb-0 pb-0"><%= f.label :sealed, "RFQ Sealed?" %></h5>
+  <%= f.select :sealed, options_for_select([['Sealed RFQ', true], ['Open RFQ', false]]), { include_blank: "RFQ Sealed?"}, class: "form-control" %>
+</div>
+<div class="py-2">
+  <h5 class="mb-0 pb-0"><%= f.label :name, "RFQ Name" %></h5>
+  <%= f.text_field :name, placeholder: "RFQ Name", class: "form-control" %>
+</div>
+<div class="py-2">
+  <h5 class="mb-0 pb-0"><%= f.label :number, "RFQ Number" %></h5>
+  <%= f.text_field :number, placeholder: "RFQ Number", class: "form-control" %>
+</div>
+<div class="py-2">
+  <h5 class="mb-0 pb-0"><%= f.label :initiator, "Initiator" %></h5>
+  <%= f.text_field :initiator, placeholder: "Initiator", class: "form-control" %>
+</div>
+<div class="py-2">
+  <h5 class="mb-0 pb-0"><%= f.label :issue_date, "Issue Date" %></h5>
+  <%= f.datetime_field :issue_date, placeholder: "Issue Date", class: "form-control" %>
+</div>
+<div class="py-2">
+  <h5 class="mb-0 pb-0"><%= f.label :due_date, "Due Date" %></h5>
+  <%= f.datetime_field :due_date, placeholder: "Due Date", class: "form-control" %>
+</div>

@@ -1,0 +1,25 @@
+<div class="row py-2 pt-5">
+  <div class="col-md-12">
+    <header class="row">
+      <div class="col-md-4">
+        <h2><%= @project.name %></h2>
+        <h5><%= @project.number %></h5>
+        <p><strong>Jobsite:</strong> <%= @project.jobsite %></p>
+        <%= link_to "Back", :back %>
+      </div>
+      <div class="col-md-4">
+        <h3><%= @rfq.name %></h3>
+        <h5><%= @rfq.number %></h5>
+        <p><strong>Initiator:</strong> <%= @rfq.initiator %></p>
+      </div>
+      <div class="col-md-4">
+        <p>
+          <strong>Issue Date:</strong> <%= @rfq.issue_date %><br />
+          <strong>Due Date:</strong> <%= @rfq.due_date %><br />
+          <strong>Status:</strong> <%= @rfq.status %><br />
+          <strong>Sealed?:</strong> <%= @rfq.sealed %>
+        </p>
+      </div>
+    </header>
+  </div>
+</div>

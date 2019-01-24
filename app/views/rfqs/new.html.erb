@@ -1,0 +1,12 @@
+<div class="row py-5">
+  <div class="col-md-6 offset-3">
+    <h2 class="text-center">New RFQ</h2>
+    <%= form_with model: [@project, @rfq] do |f| %>
+      <%= render 'form_fields', f:f %>
+      <div class="py-2 text-center">
+        <%= f.submit "Create RFQ", class: "btn btn-primary" %>
+        <%= link_to "Cancel", :back, class: "btn btn-secondary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
